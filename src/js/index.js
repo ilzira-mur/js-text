@@ -41,7 +41,7 @@ btnNext.addEventListener("click", function () {
     // Делаем индикатор слайда красный
     viewSliders[viewSlide].style.backgroundColor = "red";
     // Условие, если номер слайда меньше четырёх
-    if (viewSlide < 4) { // Если верно то
+    if (viewSlide < 6) { // Если верно то
         // Увеличиваем номер слайда на один
         viewSlide++;
     } else { // Иначе
@@ -64,7 +64,7 @@ btnPrev.addEventListener("click", function () {
         viewSlide--; 
     } else { // Иначе
         // Номер слайда равен четырём
-        viewSlide = 4; 
+        viewSlide = 6; 
     }
     // Закрашиваем индикатор слайда в зелёный
     viewSliders[viewSlide].style.backgroundColor = "green";
@@ -102,3 +102,21 @@ document.getElementById("demotitilefour").innerHTML = objfour.title;
 
 const  five = '{"img": "https://i.ytimg.com/vi/317jz-PU7Mg/maxresdefault.jpg", "info": "Новость", "title": "Экс-командующий ВДВ генерал-полковник Шпак: США запретили Польше вводить войска на Украину"}'
 const objfive = JSON.parse(five)
+
+document.getElementById('demoimgfive').setAttribute('src', objfive.img);
+document.getElementById("demoinfofive").innerHTML = objfive.info;
+document.getElementById("demotitileffive").innerHTML = objfive.title;
+
+const  six = '{"img": "https://i.ytimg.com/vi/YSHDBB6id4A/maxresdefault.jpg", "info": "Новость", "title": "Bloomberg: Еврокомиссия предложила отложить запрет на поставки нефти по «Дружбе»"}'
+const objfsix = JSON.parse(five)
+
+document.getElementById('demoimgsix').setAttribute('src', objfsix.img);
+document.getElementById("demoinfosix").innerHTML = objfsix.info;
+document.getElementById("demotitilefsix").innerHTML = objfsix.title;
+
+const  seven = '{"img": "https://preview.redd.it/7aydec8cp6m41.jpg?width=640&crop=smart&auto=webp&s=22d2b330801f064094184eda733e2e6880c58809", "info": "Новость", "title": "Росавиация продлила ограничение полетов в южные аэропорты до 6 июня"}'
+const objseven= JSON.parse(five)
+
+document.getElementById('demoimgseven').setAttribute('src', objfsix.img);
+document.getElementById("demoinfosseven").innerHTML = objfsix.info;
+document.getElementById("demotitilefseven").innerHTML = objfsix.title;
