@@ -1,4 +1,24 @@
-
+let ctx = document.getElementById('myChart').getContext('2d');
+let chart = new Chart(ctx, {
+// Тип графика
+type: 'bar',
+ 
+// Создание графиков
+data: {
+    // Точки графиков
+    labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+    // График
+    datasets: [{
+        label: 'это Chart.js', // Название
+        backgroundColor: 'rgb(255, 99, 132)', // Цвет закраски
+        borderColor: 'rgb(255, 99, 132)', // Цвет линии
+        data: [2.3, 3.1, 4.0, 10.1, 4.0, 3.6, 3.2, 2.3, 1.4, 0.8, 0.5, 0.2] // Данные каждой точки графика
+    }]
+},
+ 
+// Настройки графиков
+options: {}
+});
 
 // Получаем видимую часть слайда
 let viewport = document.getElementById("viewport").offsetWidth;
@@ -82,4 +102,3 @@ document.getElementById("demotitilefour").innerHTML = objfour.title;
 
 const  five = '{"img": "https://i.ytimg.com/vi/317jz-PU7Mg/maxresdefault.jpg", "info": "Новость", "title": "Экс-командующий ВДВ генерал-полковник Шпак: США запретили Польше вводить войска на Украину"}'
 const objfive = JSON.parse(five)
-

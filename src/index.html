@@ -2,17 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Сладер на чистом JS</title>
+    <title>JS</title>
     <link rel="stylesheet" href="./style.css">
-<script>
-    const obj = JSON.parse('slider.json');
-    document.getElementById("demo").innerHTML = obj.info;
-    console.log(obj.info)
-    console.log('dd')
-</script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
 </head>
 <body>
-    
+    <section>
+        
     <div id="viewport">
         <div class="slider" style="left: 0">
             <div  class="slide">
@@ -53,6 +49,15 @@
  
     <button class="prev" id="prev">Назад</button>
     <button class="next" id="next">Вперёд</button>
+    </section>
+   
+<section>
+    <canvas class="canvas" id="myChart" width="300" height="200"></canvas>
+</section>
+<section>
+    
+</section>
+    
     <script src="./script.js"></script>
 </body>
 </html>
