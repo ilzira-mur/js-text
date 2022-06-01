@@ -12,7 +12,7 @@ html, body {
 .slider {
     position: relative;
     transition: 500ms;
-    width: calc(100% * 5);
+    width: calc(100% * 7);
     height: 450px; 
     display: flex;
     justify-content: start;
@@ -32,7 +32,7 @@ html, body {
 }
  
 #viewSlider {
-    width: calc(30px * 5);
+    width: calc(30px * 7);
     display: flex;
     justify-content: space-between;
 }

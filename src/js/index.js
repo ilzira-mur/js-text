@@ -1,74 +1,55 @@
+// Создание графика
 let ctx = document.getElementById('myChart').getContext('2d');
 let chart = new Chart(ctx, {
-// Тип графика
+
 type: 'bar',
  
-// Создание графиков
+
 data: {
-    // Точки графиков
+    
     labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
-    // График
+    
     datasets: [{
-        label: 'это Chart.js', // Название
-        backgroundColor: 'rgb(255, 99, 132)', // Цвет закраски
-        borderColor: 'rgb(255, 99, 132)', // Цвет линии
+        label: '',
+        backgroundColor: 'rgb(255, 99, 132)',
+        borderColor: 'rgb(255, 99, 132)',
         data: [2.3, 3.1, 4.0, 10.1, 4.0, 3.6, 3.2, 2.3, 1.4, 0.8, 0.5, 0.2] // Данные каждой точки графика
     }]
-},
- 
-// Настройки графиков
-options: {}
+}
 });
 
-// Получаем видимую часть слайда
+// слайдер
 let viewport = document.getElementById("viewport").offsetWidth;
-// Получаем кнопку вперёд
 let btnNext = document.getElementById("next");
-// Получаем кнопку назад
 let btnPrev = document.getElementById("prev");
-// Получаем элемент со всеми слайдами
 let slider = document.querySelector("div.slider");
-// Получаем элементы показа слайда
 let viewSliders = document.querySelectorAll(".viewSlide");
-// Объявляем переменную номера слайда
 let viewSlide = 0;
  
-// Назначаем цвет индикатор слайда зелёный
+
 viewSliders[0].style.backgroundColor = "green";
  
-// Обработка клика на кнопку вперёд
+
 btnNext.addEventListener("click", function () {
-    // Делаем индикатор слайда красный
     viewSliders[viewSlide].style.backgroundColor = "red";
-    // Условие, если номер слайда меньше четырёх
-    if (viewSlide < 6) { // Если верно то
-        // Увеличиваем номер слайда на один
+    if (viewSlide < 6) {
         viewSlide++;
-    } else { // Иначе
-        // Номер слайда равен нулю
+    } else {
         viewSlide = 0;
     }
-    // Закрашиваем индикатор слайда в зелёный
     viewSliders[viewSlide].style.backgroundColor = "green";
-    // Меняем позицию всего слайда
     slider.style.left = -viewSlide * viewport + "px";
+    console.log(slider.style.left)
 });
  
-// Обработка клика на кнопку назад
 btnPrev.addEventListener("click", function () {
-    // Делаем индикатор слайда красный
     viewSliders[viewSlide].style.backgroundColor = "red";
-    // Условие, если номер слайда больше нуля
-    if (viewSlide > 0) { // Если верно то
-        // Уменьшаем номер слайда
+    if (viewSlide > 0) { 
         viewSlide--; 
-    } else { // Иначе
-        // Номер слайда равен четырём
+    } else {
         viewSlide = 6; 
     }
-    // Закрашиваем индикатор слайда в зелёный
     viewSliders[viewSlide].style.backgroundColor = "green";
-    // Меняем позицию всего слайда
     slider.style.left = -viewSlide * viewport + "px";
 });
 
@@ -114,9 +95,9 @@ document.getElementById('demoimgsix').setAttribute('src', objfsix.img);
 document.getElementById("demoinfosix").innerHTML = objfsix.info;
 document.getElementById("demotitilefsix").innerHTML = objfsix.title;
 
-const  seven = '{"img": "https://preview.redd.it/7aydec8cp6m41.jpg?width=640&crop=smart&auto=webp&s=22d2b330801f064094184eda733e2e6880c58809", "info": "Новость", "title": "Росавиация продлила ограничение полетов в южные аэропорты до 6 июня"}'
+const  seven = '{"img": "https://preview.redd.it/7aydec8cp6m41.jpg?width=640&crop=smart&auto=webp&s=22d2b330801f064094184eda733e2e6880c58809","info": "Новость","title": "Росавиация продлила ограничение полетов в южные аэропорты до 6 июня"}'
 const objseven= JSON.parse(five)
 
-document.getElementById('demoimgseven').setAttribute('src', objfsix.img);
-document.getElementById("demoinfosseven").innerHTML = objfsix.info;
-document.getElementById("demotitilefseven").innerHTML = objfsix.title;
+document.getElementById('demoimgseven').setAttribute('src', objseven.img);
+document.getElementById("demoinfosseven").innerHTML = objseven.info;
+document.getElementById("demotitilefseven").innerHTML = objseven.title;
